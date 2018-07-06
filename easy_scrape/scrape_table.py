@@ -3,9 +3,9 @@ import pandas as pd
 from selenium import webdriver
 import requests
 import time
-from body_data import tbody_data
+from . import body_data
 
-class easy_scrape(object):
+class scrape_table(object):
 
     def __init__(self, path):
         try:
@@ -63,15 +63,15 @@ class easy_scrape(object):
             for th in thead_tag[0].find_all('th'):
                 headers_list.append(th.text)
             main_dataframe = pd.DataFrame(columns=headers_list)
-            main_dataframe = tbody_data(pretty_table, main_dataframe, 0, choice)
+            main_dataframe = body_data.tbody_data(pretty_table, main_dataframe, 0, choice)
 
         else:
             main_dataframe = pd.DataFrame()
-            main_dataframe = tbody_data(pretty_table, main_dataframe, 1, choice)
+            main_dataframe = body_data.tbody_data(pretty_table, main_dataframe, 1, choice)
 
         return main_dataframe
-
-if __name__ == '__main__':
-    obj = easy_scrape(r'C:/Users/sarthak_negi_/Downloads/chromedriver_win32/chromedriver.exe')
-    df = obj.table(url = 'https://en.wikipedia.org/wiki/List_of_NBA_champions', class_name = 'wikitable sortable jquery-tablesorter')
-    print(df)
+#
+# if __name__ == '__main__':
+#     obj = easy_scrape(r'C:/Users/sarthak_negi_/Downloads/chromedriver_win32/chromedriver.exe')
+#     df = obj.table(url = 'https://en.wikipedia.org/wiki/List_of_NBA_champions', class_name = 'wikitable sortable jquery-tablesorter')
+#     print(df)
