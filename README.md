@@ -8,12 +8,9 @@ https://pypi.org/project/easy-scrape/
 
 ## Prerequisites
 
-selenium 3 - 
-BeautifulSoup
-requests
-chrome webdriver
-
-Use the requirements.txt file to install the prerequisites
+* selenium 3
+* BeautifulSoup
+* chrome webdriver
 
 ### Installing
 
