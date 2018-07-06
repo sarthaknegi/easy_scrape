@@ -23,11 +23,12 @@ Use pip to install the package
 ### Usage
 
 ```
-from easy_scrape import easy_scrape
+from easy_scrape.scrape_table import scrape_table
 
-scrape_obj = easy_scrape(#pass the path of webdriver exe )
+scrape_obj = scrape_table(#pass the path of webdriver exe )
 
 #with the below class names there are two tbales, so a pop up will ask you which one you want to scrape (expects a number)
+
 list_of_basketball_winners = scrape_obj.table(url = 'https://en.wikipedia.org/wiki/List_of_NBA_champions', class_name = 'wikitable sortable jquery-tablesorter')
 
 
