@@ -4,6 +4,7 @@ This package makes scraping the web easier. Avaible method table, scrapes any ta
 
 There can be multiple tables with a class name, so need to provide the table number.
 
+https://pypi.org/project/easy-scrape/
 
 ## Prerequisites
 
@@ -36,5 +37,7 @@ list_of_basketball_winners = scrape_obj.table(url = 'https://en.wikipedia.org/wi
 
 ## Contributing
 
-I would love to see a pull requests for improving this package in terms of speed, bugs and for covering other data points also.
+Pull requests for improving this package in terms of speed, bugs and for covering other data points also are welcome.
+
+
 
